@@ -12,8 +12,8 @@ const TopNav = () => {
         </ul>
         <ul className={'flex flex-row'}>
           <li className={'text-xl mr-14 my-4 uppercase font-semibold tracking-wider transform hover:scale-110'}><Link to="/">About</Link></li>
-          <li className={'text-xl mr-14 my-4 uppercase font-semibold tracking-wider transform hover:scale-110'}><Link to="/education">Education</Link></li>
           <li className={'text-xl mr-14 my-4 uppercase font-semibold tracking-wider transform hover:scale-110'}><Link to="/experience">Experience</Link></li>
+          <li className={'text-xl mr-14 my-4 uppercase font-semibold tracking-wider transform hover:scale-110'}><Link to="/projects">Projects</Link></li>
           <li className={'text-xl mr-6 my-4 uppercase font-semibold tracking-wider transform hover:scale-110'}><Link to="/contact">Contact</Link></li>
         </ul>
       </nav>

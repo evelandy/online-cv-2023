@@ -1,7 +1,7 @@
 import IRoute from "../interfaces/route";
 import AboutPage from "../pages/About";
 import ContactPage from "../pages/Contact";
-import EducationPage from "../pages/Education";
+import ProjectsPage from "../pages/Projects";
 import ExperiencePage from "../pages/Experience";
 import HomePage from "../pages/Home";
 
@@ -13,9 +13,9 @@ const routes: IRoute[] = [
     exact: true
   },
   {
-    path: '/education',
-    name: 'Education Page',
-    component: EducationPage,
+    path: '/projects',
+    name: 'Projects Page',
+    component: ProjectsPage,
     exact: true
   },
   {
