@@ -1,0 +1,4 @@
+.sideNav > li {
+  border-left: 3px solid black;
+  padding-top: 10px;
+}
