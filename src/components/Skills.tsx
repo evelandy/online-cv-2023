@@ -1,33 +1,36 @@
 import { FC } from 'react';
-import { CSSLogo, FlaskLogo, JavaScriptLogo, PythonLogo, TypeScriptLogo } from '../svg';
+import { Link } from 'react-router-dom';
+import { ApacheLogo, AWSLogo, backArrowIcon, BootStrapLogo, CSSLogo, FlaskLogo, GCPLogo, GitLogo, HTMLLogo, JavaScriptLogo, MySQLLogo, NGINXLogo, PythonLogo, ReactLogo, ReactNativeLogo, SQLiteLogo, TailwindLogo, TypeScriptLogo } from '../svg';
+import '../components/styles/experienceSkills.css';
 
 export interface ISkillSet {}
 
 const SkillSet: FC<ISkillSet> = () => {
   return (
-    <div className={'mt-28'}>
-      <h2 className={'text-2xl font-bold'}>My Tool Kit</h2>
-      <ul className={'flex flex-row flex-wrap w-1/2 mx-auto'}>
+    <div className={'mt-40'}>
+      <h2 className={'text-4xl font-bold'}>My Tool Kit</h2>
+      <ul className={'grid grid-cols-6 w-full mx-auto mt-16 skills'}>
         <li>{PythonLogo()}</li>
         <li>{FlaskLogo()}</li>
         <li>{JavaScriptLogo()}</li>
-        <li>HTML</li>
+        <li>{HTMLLogo()}</li>
         <li>{CSSLogo()}</li>
-        <li>React JS</li>
+        <li>{ReactLogo()}</li>
         <li>{TypeScriptLogo()}</li>
-        <li>React Native</li>
-        <li>MySQL</li>
-        <li>SQLite</li>
-        <li>Bootstrap</li>
-        <li>Tailwind</li>
-        <li>REST API</li>
-        <li>AWS</li>
-        <li>GCP</li>
-        <li>Apache</li>
-        <li>NGINX</li>
-        <li>Git</li>
-        <li>Google Analytics</li>
-        <li>Google Tag Manager</li>
+        <li>{ReactNativeLogo()}</li>
+        <li>{MySQLLogo()}</li>
+        <li>{SQLiteLogo()}</li>
+        <li>{BootStrapLogo()}</li>
+        <li>{TailwindLogo()}</li>
+        {/* <li>REST API</li> */}
+        <li>{AWSLogo()}</li>
+        <li>{GCPLogo()}</li>
+        <li>{ApacheLogo()}</li>
+        <li>{NGINXLogo()}</li>
+        <li>{GitLogo()}</li>
+        {/* <li>{GALogo()}</li>
+        <li>Google Tag Manager</li> */}
+        <li className={'mt-4'}><Link className={''} to='/'>{backArrowIcon()}</Link></li>
       </ul>
     </div>
   );

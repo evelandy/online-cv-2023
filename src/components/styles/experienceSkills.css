@@ -1,0 +1,6 @@
+ul.skills li {
+    padding-left: 100px;
+    padding-bottom: 75px;
+    cursor: pointer;
+    display: inline;
+}
