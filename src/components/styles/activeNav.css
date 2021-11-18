@@ -1,12 +1,20 @@
 .sideNav > li {
   padding-top: 5px;
   padding-left: 10px;
+  padding-right: 10px;
   padding-bottom: 7px;
+  border-left: 1px solid gray;
+  cursor: pointer;
 }
 
-.active {
-  border-left: 3px solid black;
-  background-color: #ff0000;
+.sideNav > li.active {
+  border: unset;
+  border-left: 4px solid black;
+  background-color: #dc2626;
   color: white;
-  opacity: 0.75;
+  opacity: 0.8;
+}
+
+.description {
+  list-style-type: square;
 }
