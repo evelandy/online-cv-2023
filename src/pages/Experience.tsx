@@ -5,7 +5,7 @@ import IPage from '../interfaces/page';
 
 const ExperiencePage: FC<IPage & RouteComponentProps<any>> = () => {
   useEffect(() => {
-
+    
   }, [])
   return (
     <div className={'flex flex-col text-center mt-24'}>
