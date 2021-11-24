@@ -29,15 +29,16 @@ const HomePage: FC<IPage> = props => {
   }
 
   useEffect(() => {
-    console.log(`Loading ${props.name}`)
+    
   }, [])
+  
   return (
-    <div className={'pb-96 pt-10'}>
+    <div className={'lg:pb-96 lg:pt-10 text-center'}>
       <div className={'flex flex-column justify-center mt-72'}>
-        <h1 className={'text-7xl font-semibold text'}>Hi, I'm William <span className={'text-red-600'}>Griffin.</span></h1>
+        <h1 className={'lg:text-7xl text-6xl mb-6 font-semibold text text-center'}>Hi, I'm <span className={"text-red-600 md:text-black"}>William<span className={"md:hidden"}>.</span></span><span className={'text-red-600 hidden md:inline'}> Griffin.</span></h1>
       </div>
       <span className={'flex flex-column justify-center mt-6'}>
-      <h5 className={'text-xl'}>I am a full-stack developer with a passion for creating apps in Python, JavaScript, React JS and React Native!</h5>
+      <h5 className={'text-xl mb-6'}>I am a full-stack developer who loves front and back-end development with a passion for creating apps in Python, JavaScript, React JS and React Native!</h5>
       </span>
       <div className="flex flex-row justify-center cursor-pointer">
         <span onClick={()=> window.open("https://github.com/evelandy", "_blank")} className={'mx-8 mt-8 transform hover:scale-110'}>{githubIcon()}</span>
