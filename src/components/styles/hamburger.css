@@ -19,17 +19,23 @@
   height: 90%;
   position: absolute;
   margin-top: 10px;
-  margin-left: 15px;
 }
 
 #slide_menu li {
   border-bottom: 1px dotted lightgray;
+  background-color: white;
+  width: 135%;
+  height: 60px;
+  position: relative;
+  right: 10px;
+  font-size: 32px;
 }
 
 #slide_menu li:hover {
-  width: 200px;
-  background-color: red;
-  box-shadow: inset 0px 0px 50px 0px #848484;
+  width: 135%;
+  background-color: white;
+  box-shadow: inset 10px 15px 60px 5px lightgray;
+  border-radius: 2px;
 }
 
 #slide_menu li a {
