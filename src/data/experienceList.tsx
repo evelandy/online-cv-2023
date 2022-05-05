@@ -7,6 +7,13 @@ export interface jobList {
 
 const experienceList: Array<any> = [
     {
+        id: '0',
+        name: 'Halliburton',
+        title: 'Application Developer',
+        description: 'the description will go here before going to production.',
+        date: '04/18/2022'
+    },
+    {
         id: '1',
         name: 'Gretrix',
         title: 'Full-Stack Web Developer',

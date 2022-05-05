@@ -12,10 +12,10 @@ const TopNav: FC<ITopNavProps> = () => {
       <div id="slide_nav" className={"lg:hidden"}>
         <p id="slide_nav_button" onClick={() => setHamburgerOpen(!hamburgerOpen)}>☰</p>
       </div>
-      <span className={""}>
-        <nav className={'flex sticky top-0 bg-white-primary'}>
+      <span onClick={() => setHamburgerOpen(!hamburgerOpen)} className={""}>
+        <nav className={'flex sticky top-0 bg-white-primary z-40'}>
           <ul className={'flex flex-row hamburgerList'} id='slide_menu' style={{display: (hamburgerOpen ? 'block' : 'none')}}>
-            <li className={'uppercase font-semibold tracking-wider transform hover:scale-110'}><a href="#">Resume</a></li>
+            <li className={'uppercase font-semibold tracking-wider transform hover:scale-110'}><Link to="/">Resume</Link></li>
             <li className={'uppercase font-semibold tracking-wider transform hover:scale-110'}><Link to="/">About</Link></li>
             <li className={'uppercase font-semibold tracking-wider transform hover:scale-110'}><Link to="/experience">Experience</Link></li>
             <li className={'uppercase font-semibold tracking-wider transform hover:scale-110'}><Link to="/projects">Projects</Link></li>
