@@ -13,7 +13,7 @@ const TopNav: FC<ITopNavProps> = () => {
         <p id="slide_nav_button" onClick={() => setHamburgerOpen(!hamburgerOpen)}>☰</p>
       </div>
       <span onClick={() => setHamburgerOpen(!hamburgerOpen)} className={""}>
-        <nav className={'flex sticky top-0 bg-white-primary'}>
+        <nav className={'flex sticky top-0 bg-white-primary z-40'}>
           <ul className={'flex flex-row hamburgerList'} id='slide_menu' style={{display: (hamburgerOpen ? 'block' : 'none')}}>
             <li className={'uppercase font-semibold tracking-wider transform hover:scale-110'}><Link to="/">Resume</Link></li>
             <li className={'uppercase font-semibold tracking-wider transform hover:scale-110'}><Link to="/">About</Link></li>
