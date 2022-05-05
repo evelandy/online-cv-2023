@@ -9,9 +9,9 @@ const ExperiencePage: FC<IPage & RouteComponentProps<any>> = () => {
     
   }, [])
   return (
-    <div className={'flex flex-col text-center mt-40'}>
-      <h2 className={'text-4xl font-bold tracking-wider'}>Past <span className={'text-red-600'}>&&</span> Present Experience</h2>
-      <nav className={'w-3/4 mx-auto ml-60'}>
+    <div className={'flex flex-col text-center mt-28'}>
+      <h2 className={'text-3xl font-bold tracking-wider'}>Past <span className={'text-red-600'}>&&</span> Present Experience</h2>
+      <nav className={''}>
         <SideNav />
       </nav>
       <SkillSet />
