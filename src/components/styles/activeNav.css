@@ -10,9 +10,9 @@
 .sideNav > li.active {
   border: unset;
   border-left: 4px solid black;
-  background-color: #dc2626;
+  background-color: #e55754;
   color: white;
-  opacity: 0.8;
+  /* opacity: 0.8; */
 }
 
 .description {

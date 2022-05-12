@@ -1,0 +1,3 @@
+.appContainer:first-child .hamNavSticky:not(:hover) {
+    opacity: 90%;
+}
