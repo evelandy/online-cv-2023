@@ -12,7 +12,7 @@ const TopNav: FC<ITopNavProps> = () => {
     if($(window).scrollTop()) {
       $('.hamNav').addClass('hamNavSticky');
     } else {
-      $('.hamNav').removeClass('hamNavSticky')
+      $('.hamNav').removeClass('hamNavSticky');
     }
   })
   
@@ -32,9 +32,9 @@ const TopNav: FC<ITopNavProps> = () => {
           </ul>
         </nav>
       </span>
-      <div className={"hidden lg:block"}>
+      <div className={"hidden lg:block test"}>
         <nav className={'sticky top-0 bg-white-primary'}>
-          <ul className={'flex justify-between'}>
+          <ul className={'flex justify-between fullNav'}>
             <li className={'lg:text-xl lg:my-4 uppercase font-semibold tracking-wider transform hover:scale-110'}><a href="#">Resume</a></li>
             <ul className={"flex"}>
               <li className={'lg:text-xl lg:mr-10 xl:mr-14 lg:my-4 uppercase font-semibold tracking-wider transform hover:scale-110'}><Link to="/">About</Link></li>

@@ -62,14 +62,37 @@
   position: fixed;
   top: 0px;
   left: 0px;
-  padding-left: 50px;
-  padding-bottom: 10px;
-  background-color: #dc2626;
-  display: block;
   width: 100%;
-  /* opacity: 85%; */
 }
 
-.hamNavSticky .hamburgerList {
-  width: 69%;
+
+@media screen and (min-width: 1024px) {
+  .hamNavSticky > div.test {
+    margin-left: 8rem;
+  }
+  .hamNavSticky div nav .fullNav > ul {
+    margin-right: 8rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .hamNavSticky > div.test {
+    margin-left: 11.25rem;
+  }
+  .hamNavSticky div nav .fullNav > ul {
+    margin-right: 11.25rem;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .hamNavSticky {
+    padding-left: 50px;
+    padding-bottom: 10px;
+    background-color: #dc2626;
+    display: block;
+    width: 100%;
+  }
+  
+  .hamNavSticky .hamburgerList {
+    width: 69%;
+  }  
 }

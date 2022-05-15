@@ -7,9 +7,9 @@ export interface ISkillSet {}
 
 const SkillSet: FC<ISkillSet> = () => {
   return (
-    <div className={'mt-24'}>
+    <div className={'mt-24 2xl:mt-60'}>
       <h2 className={'text-4xl font-bold'}>My Tool Kit</h2>
-      <ul className={'grid grid-cols-3 w-full mx-auto mt-12 skills'}>
+      <ul className={'grid grid-cols-3 w-full mx-auto mt-12 skills lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-8'}>
         <li>{JavaScriptLogo()}</li>
         <li>{HTMLLogo()}</li>
         <li>{CSSLogo()}</li>
