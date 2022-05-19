@@ -35,7 +35,7 @@ const HomePage: FC<IPage> = props => {
   return (
     <div className={'lg:pb-20 lg:pt-10 text-center'}>
       <div className={'flex flex-column justify-center mt-40'}>
-        <h1 className={'lg:text-7xl text-6xl mb-6 font-semibold text text-center md:whitespace-nowrap'}>Hi, I'm <span className={"text-red-600 md:text-black"}>William<span className={"md:hidden"}>.</span></span><span className={'text-red-600 hidden md:inline'}> Griffin.</span></h1>
+        <h1 className={'lg:text-7xl text-6xl mb-6 font-semibold text text-center md:whitespace-nowrap'}>Hi, I'm <span className={"text-red-600 md:text-black dm-name-header"}>William<span className={"md:hidden"}>.</span></span><span className={'text-red-600 hidden md:inline'}> Griffin.</span></h1>
       </div>
       <span className={'flex flex-column justify-center mt-6'}>
       <h5 className={'text-xl mb-6'}>I am a full-stack developer who loves front and back-end development with a passion for creating apps in Python, JavaScript, React JS and React Native!</h5>
