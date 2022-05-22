@@ -8,13 +8,14 @@
 [data-theme="dark"] {
     --font-color: #eee;
     --background-color: #333;
-    --link-color: lightblue;
+    --link-color: #fff;
     --name-header-color: #dc2626;
 }
 
 body {
     background-color: var(--background-color);
     color: var(--font-color);
+    transition: 0.8s;
 }
 
 a {
@@ -41,8 +42,8 @@ h1 span.dm-name-header {
 .toggle-theme {
     position: relative;
     display: inline-block;
-    height: 18px;
-    width: 30px;
+    height: 28px;
+    width: 50px;
 }
 
 .toggle-theme input {
@@ -64,15 +65,15 @@ h1 span.dm-name-header {
     background-color: #fff;
     bottom: 2px;
     content: "";
-    height: 14px;
+    height: 24px;
     left: 2px;
     position: absolute;
     transition: 0.4s;
-    width: 14px;
+    width: 24px;
 }
 
 input:checked + .slider::before {
-    transform: translateX(12px);
+    transform: translateX(21.5px);
 }
 
 input:checked + .slider {
@@ -80,7 +81,7 @@ input:checked + .slider {
 }
 
 .slider.round {
-    border-radius: 34px;
+    border-radius: 33px;
 }
 
 .slider.slider.round::before {

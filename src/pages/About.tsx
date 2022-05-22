@@ -3,7 +3,7 @@ import IPage from '../interfaces/page';
 import '../components/styles/blinker.css';
 import { Route } from 'react-router-dom';
 
-const HomePage: FC<IPage> = props => {
+const HomePage: FC<IPage> = ({name, globalTheme}) => {
   const githubIcon = () => {
     return (
       <svg height="52" viewBox="0 0 1792 1792" width="52" xmlns="http://www.w3.org/2000/svg">
@@ -29,7 +29,7 @@ const HomePage: FC<IPage> = props => {
   }
 
   useEffect(() => {
-    
+
   }, [])
   
   return (
