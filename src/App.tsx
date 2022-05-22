@@ -31,12 +31,16 @@ const App = () => {
   }
   
   useEffect(() => {
-    console.log('Loading App')
+    if(storedTheme === 'dark'){
+      setDark();
+    } else {
+      setLight();
+    }
   }, [])
   return (
     <div className={'w-9/12 mx-auto appContainer'}>
       <BrowserRouter>
-      <TopNav />
+      <TopNav toggleTheme={toggleTheme} defaultDark={defaultDark} />
         <Switch>
           {routes.map((route, i) => {
             return (
@@ -47,6 +51,7 @@ const App = () => {
                 render={(props: RouteComponentProps<any>) => (
                   <route.component
                   name={route.name}
+                  globalTheme={storedTheme}
                   {...props}
                   {...route.props}
                   />
@@ -55,7 +60,7 @@ const App = () => {
             )
           })}
         </Switch>
-        <div className="toggle-theme-wrapper mt-14 mb-16">
+        {/* <div className="toggle-theme-wrapper mt-14 mb-16">
           <span>☀️</span>
           <label className="toggle-theme" htmlFor="checkbox">
             <input
@@ -67,7 +72,7 @@ const App = () => {
             <div className="slider round"></div>
           </label>
           <span>🌒</span>
-        </div>
+        </div> */}
         {/* <button onClick={() => {
               localStorage.getItem("theme") === "dark" ? setLight() : setDark();
           }} className='border-2 rounded p-2'>

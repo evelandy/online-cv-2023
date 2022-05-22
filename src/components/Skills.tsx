@@ -5,7 +5,7 @@ import '../components/styles/experienceSkills.css';
 
 export interface ISkillSet {}
 
-const SkillSet: FC<ISkillSet> = () => {
+  const SkillSet: FC<ISkillSet> = () => {
   return (
     <div className={'mt-24 2xl:mt-60'}>
       <h2 className={'text-4xl font-bold'}>My Tool Kit</h2>
@@ -21,9 +21,9 @@ const SkillSet: FC<ISkillSet> = () => {
         <li>{GitLogo()}</li>
         <li>{ReactNativeLogo()}</li>
         <li>{JALogo()}</li>
-        <li>{SQLiteLogo()}</li>
-        <li>{MySQLLogo()}</li>
-        <li>{AWSLogo()}</li>
+        <li style={{backgroundColor: 'white', paddingTop: '1px', paddingLeft: '3px', paddingRight: '3px'}}>{SQLiteLogo()}</li>
+        <li style={{backgroundColor: 'white', paddingTop: '1px', paddingLeft: '3px', paddingRight: '3px'}}>{MySQLLogo()}</li>
+        <li style={{backgroundColor: 'white', paddingTop: '1px', paddingLeft: '3px', paddingRight: '3px'}}>{AWSLogo()}</li>
         <li>{GCPLogo()}</li>
         <li>{NGINXLogo()}</li>
         <li>{ApacheLogo()}</li>

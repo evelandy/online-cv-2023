@@ -5,7 +5,7 @@ import SkillSet from '../components/Skills';
 import IPage from '../interfaces/page';
 import '../components/styles/activeNav.css';
 
-const ExperiencePage: FC<IPage & RouteComponentProps<any>> = () => {
+const ExperiencePage: FC<IPage & RouteComponentProps<any>> = ({name, globalTheme}) => {
   useEffect(() => {
     
   }, [])
