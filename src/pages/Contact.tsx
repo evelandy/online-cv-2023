@@ -15,34 +15,34 @@ const ContactPage: FC<IContact & RouteComponentProps<any>> = () => {
   return (
     <div className={'sm:flex sm:flex-col md:flex md:justify-between mt-10'}>
       <h1 className={'uppercase text-4xl text-center mb-14'}>Contact</h1>
-      <span>
+      <span className={'lg:flex lg:flex-row '}>
         <iframe
-          width={"50%"}
+          width={"100%"}
           height={"100%"}
           title={"map"}
-          className={"w-full h-96"}
+          className={"contact-map h-96 mb-14 rounded lg:relative lg:top-40"}
           src={"https://www.google.com/maps/embed/v1/place?q=10950+Tanner+Park+Ct.+&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"}
         />
-        <div className={'flex flex-col space-between contact-container mt-10 mb-24'}>
-          <form className={'contact-form flex flex-col mt-10 md:ml-auto md:mr-auto'}>
+        <div className={'contact-container flex flex-col space-between mb-24'}>
+          <form className={'contact-form flex flex-col md:ml-auto md:mr-auto sm:w-full'}>
             <label className={'flex flex-col text-white text-lg'} htmlFor="Name">Name
-              <input type="text" name="Name" id="Name" className={'rounded w-96 text-black h-9'} required/>
+              <input type="text" name="Name" id="Name" className={'rounded text-black h-9'} required/>
             </label>
             <label className={'flex flex-col text-white text-lg'} htmlFor="LName">Company
-              <input type="text" name="company" id="company" className={'rounded w-96 text-black h-9'} required/>
+              <input type="text" name="company" id="company" className={'rounded text-black h-9'} required/>
             </label>
             <label className={'flex flex-col text-white text-lg'} htmlFor="email">Email
-              <input type="email" name="email" id="email" className={'rounded w-96 text-black h-9'} required/>
+              <input type="email" name="email" id="email" className={'rounded text-black h-9'} required/>
             </label>
             <label className={'flex flex-col text-white text-lg'} htmlFor="message">Message
-              <textarea name="message" id="message" cols={30} rows={10} className={'rounded w-96 text-black'} placeholder="Leave a short message (optional)" maxLength={250}></textarea>
+              <textarea name="message" id="message" cols={30} rows={10} className={'rounded text-black'} placeholder="Leave a short message (optional)" maxLength={250}></textarea>
             </label>
             <label className={'flex flex-col text-white mt-6 mb-4'} htmlFor="document">Job Info<br/>*PDF, DOCX, TXT, DOC
               <input type="file" name="description" id="job-desc" className={'mt-2'} required/>
             </label>
             <span>
-              <input type="submit" name="submit" id="submit" className={'mt-6 rounded text-black bg-gray-100 text-md w-96 h-8 uppercase cursor-pointer'} />
-              {/* <Link className={'border border-black rounded bg-gray-100 w-60 h-8 text-center text-black text-lg'} to='/'>Home</Link> */}
+              <input type="submit" name="submit" id="submit" className={'mt-6 rounded text-black bg-gray-100 text-md w-full h-8 uppercase cursor-pointer'} />
+              {/* <Link className={'border border-black rounded bg-gray-100 h-8 text-center text-black text-lg'} to='/'>Home</Link> */}
             </span>
           </form>
         </div>
