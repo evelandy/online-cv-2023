@@ -3,6 +3,8 @@
     --background-color: #fff;
     --link-color: #000;
     --name-header-color: #dc2626;
+    --contact-input: #fff;
+    --input-border: 1px solid #333;
 }
 
 [data-theme="dark"] {
@@ -10,6 +12,8 @@
     --background-color: #333;
     --link-color: #fff;
     --name-header-color: #dc2626;
+    --contact-input: #444;
+    --input-border: 1px solid #eee;
 }
 
 body {
@@ -86,4 +90,28 @@ input:checked + .slider {
 
 .slider.slider.round::before {
     border-radius: 50%;
+}
+
+/* contact */
+form.contact-form label {
+    color: var(--font-color);
+}
+
+label input,
+label textarea {
+    background-color: var(--contact-input);
+    border: var(--input-border);
+    padding: 5px;
+}
+
+label input:focus,
+label textarea:focus {
+    background-color: white;
+    outline: 1px solid tomato;
+}
+
+#job-desc {
+    border: none;
+    outline: none;
+    background-color: inherit;
 }
