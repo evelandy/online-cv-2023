@@ -15,12 +15,12 @@ const ContactPage: FC<IContact & RouteComponentProps<any>> = () => {
   return (
     <div className={'sm:flex sm:flex-col md:flex md:justify-between mt-10'}>
       <h1 className={'uppercase text-4xl text-center mb-14'}>Contact</h1>
-      <span className={'lg:flex lg:flex-row '}>
+      <span className={'lg:flex lg:flex-row space-between'}>
         <iframe
           width={"100%"}
           height={"100%"}
           title={"map"}
-          className={"contact-map h-96 mb-14 rounded lg:relative lg:top-40"}
+          className={"contact-map h-96 mb-14 rounded w-1/2"}
           src={"https://www.google.com/maps/embed/v1/place?q=10950+Tanner+Park+Ct.+&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"}
         />
         <div className={'contact-container flex flex-col space-between mb-24'}>
