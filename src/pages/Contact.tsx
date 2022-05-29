@@ -16,24 +16,33 @@ const ContactPage: FC<IContact & RouteComponentProps<any>> = () => {
   const handleSubmit = (e:any) => {
     e.preventDefault();
     const contactObj = {"name": Name, "company": Company, "email": Email, "message": Message, "job_desc": Job_desc};
-    const url = 'api/test';
+    const url = 'https://williamgriffin.pythonanywhere.com/api/v1/contact';
     const requestOptions = {
       method: "POST",
       headers: { "access-control-allow-origin" : "*", "Content-Type": "application/json" },
       body: JSON.stringify(contactObj.job_desc)
     };
-    fetch(url, {
+    fetch ('https://williamgriffin.pythonanywhere.com/api/v1/contact', {
       method: "POST",
       headers: { 
         "Access-Control-Allow-Origin" : "*", 
         "Content-Type": "application/json",
         "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
       },
-      body: JSON.stringify(contactObj.job_desc)
+      body: JSON.stringify(contactObj)
     })
     .then(response => response.json())
-    .then(res => alert(res));
+    .then(res => console.log(res));
   }
+
+  // const handleSubmit = (e:any) => {
+  //   e.preventDefault();
+  //   fetch('https://williamgriffin.pythonanywhere.com/api/v1/contact', {
+  //     method: 'GET',
+  //   })
+  //   .then(response => response.json())
+  //   .then(res => alert(res));
+  // }
 
   useEffect(() => {
     
