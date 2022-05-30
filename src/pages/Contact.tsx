@@ -15,6 +15,7 @@ const ContactPage: FC<IContact & RouteComponentProps<any>> = () => {
 
   const handleSubmit = (e:any) => {
     e.preventDefault();
+    // console.log('test', Job_desc)
     const contactObj = {"name": Name, "company": Company, "email": Email, "message": Message, "job_desc": Job_desc};
     const url = 'https://williamgriffin.pythonanywhere.com/api/v1/contact';
     const requestOptions = {
@@ -32,7 +33,8 @@ const ContactPage: FC<IContact & RouteComponentProps<any>> = () => {
       body: JSON.stringify(contactObj)
     })
     .then(response => response.json())
-    .then(res => console.log(res));
+    .then(res => console.log('success: ', res))
+    .catch((err) => console.log('error: ', err))
   }
 
   // const handleSubmit = (e:any) => {
@@ -62,19 +64,19 @@ const ContactPage: FC<IContact & RouteComponentProps<any>> = () => {
         <div className={'contact-container flex flex-col space-between mb-24'}>
           <form className={'contact-form flex flex-col md:ml-auto md:mr-auto sm:w-full'} encType="multipart/form-data">
             <label className={'flex flex-col text-white text-lg'} htmlFor="Name">Name
-              <input onChange={(e:any) => {setName(e.target.value)}} type="text" name="Name" id="Name" className={'rounded text-black h-9'} required/>
+              <input onChange={(e:any) => {setName(e.target.value)}} type="text" name="Name" id="Name" className={'rounded text-black h-9'} />
             </label>
             <label className={'flex flex-col text-white text-lg'} htmlFor="LName">Company
-              <input onChange={(e:any) => {setCompany(e.target.value)}} type="text" name="company" id="company" className={'rounded text-black h-9'} required/>
+              <input onChange={(e:any) => {setCompany(e.target.value)}} type="text" name="company" id="company" className={'rounded text-black h-9'} />
             </label>
             <label className={'flex flex-col text-white text-lg'} htmlFor="email">Email
-              <input onChange={(e:any) => {setEmail(e.target.value)}} type="email" name="email" id="email" className={'rounded text-black h-9'} required/>
+              <input onChange={(e:any) => {setEmail(e.target.value)}} type="email" name="email" id="email" className={'rounded text-black h-9'} />
             </label>
             <label className={'flex flex-col text-white text-lg'} htmlFor="message">Message
               <textarea onChange={(e:any) => {setMessage(e.target.value)}} name="message" id="message" cols={30} rows={10} className={'rounded text-black'} placeholder="Leave a short message (optional)" maxLength={250}></textarea>
             </label>
             <label className={'flex flex-col text-white mt-6 mb-4'} htmlFor="document">Job Info<br/>*PDF, DOCX, TXT, DOC
-              <input onChange={(e:any) => {setJob_desc(e.target.value)}} type="file" name="description" id="job-desc" className={'mt-2'} required/>
+              <input onChange={(e:any) => {setJob_desc(e.target.files)}} type="file" name="description" id="job-desc" className={'mt-2'} />
             </label>
             <span>
               <input onClick={handleSubmit} type="submit" name="submit" id="submit" className={'mt-6 rounded text-black bg-gray-100 text-md w-full h-8 uppercase cursor-pointer'} />

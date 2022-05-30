@@ -4,9 +4,9 @@ export default interface IPage {
 }
 
 export default interface IContact {
-  name: string;
-  company: string;
-  email: string;
-  message: string;
-  document: any;
+  Name: string;
+  Company: string;
+  Email: string;
+  Message: string;
+  Job_desc: string | Blob;
 }
