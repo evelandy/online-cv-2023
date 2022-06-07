@@ -2,6 +2,8 @@ import React, { FC, useEffect, useState } from 'react';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import IContact from '../interfaces/page';
 import '../components/styles/Contact.css';
+import swal from 'sweetalert';
+
 
 
 const ContactPage: FC<IContact & RouteComponentProps<any>> = () => {
@@ -13,7 +15,7 @@ const ContactPage: FC<IContact & RouteComponentProps<any>> = () => {
   const [Message, setMessage] = useState<IContact>();
   const [Job_desc, setJob_desc] = useState<IContact>();
 
-  const handleSubmit = (e:any) => {
+  const handleSubmit = async(e:any) => {
     e.preventDefault();
     // console.log('test', Job_desc)
     const contactObj = {"name": Name, "company": Company, "email": Email, "message": Message, "job_desc": Job_desc};
@@ -23,7 +25,7 @@ const ContactPage: FC<IContact & RouteComponentProps<any>> = () => {
       headers: { "access-control-allow-origin" : "*", "Content-Type": "application/json" },
       body: JSON.stringify(contactObj.job_desc)
     };
-    fetch ('https://williamgriffin.pythonanywhere.com/api/v1/contact', {
+    await fetch('https://williamgriffin.pythonanywhere.com/api/v1/contact', {
       method: "POST",
       headers: { 
         "Access-Control-Allow-Origin" : "*", 
@@ -33,8 +35,13 @@ const ContactPage: FC<IContact & RouteComponentProps<any>> = () => {
       body: JSON.stringify(contactObj)
     })
     .then(response => response.json())
-    .then(res => console.log('success: ', res))
-    .catch((err) => console.log('error: ', err))
+    .then(res => {
+      swal("Success!", "Submission Success! \nI will get back to you shortly.\nTo reach me faster, email me at: william.griffin@wrgcv.com", "success")
+      .then(() => {
+        window.location.reload();
+      })
+      // console.log('success: ', res)
+    }).catch((err) => console.log('error: ', err))
   }
 
   // const handleSubmit = (e:any) => {
