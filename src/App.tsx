@@ -29,6 +29,24 @@ const App = () => {
       setLight();
     }
   }
+
+  const themeToggler = () => {
+    return (
+      <div className="toggle-theme-wrapper mt-14 mb-16">
+        <span>☀️</span>
+        <label className="toggle-theme" htmlFor="checkbox">
+          <input
+            type="checkbox"
+            id="checkbox"
+            onChange={toggleTheme}
+            defaultChecked={defaultDark}
+          />
+          <div className="slider round"></div>
+        </label>
+        <span>🌒</span>
+      </div>
+    );
+  }
   
   useEffect(() => {
     storedTheme === 'dark' ? setDark() : setLight();
@@ -57,6 +75,7 @@ const App = () => {
             )
           })}
         </Switch>
+        <span className='block xl:hidden'>{themeToggler()}</span>
         {/* <div className="toggle-theme-wrapper mt-14 mb-16">
           <span>☀️</span>
           <label className="toggle-theme" htmlFor="checkbox">

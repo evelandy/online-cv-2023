@@ -58,7 +58,7 @@ const TopNav: FC<ITopNavProps> = ({toggleTheme, defaultDark}) => {
           <ul className={'flex justify-between fullNav'}>
             <li className={'lg:text-xl lg:my-4 uppercase font-semibold tracking-wider transform hover:scale-110'}><a href="#">Resume</a></li>
             <ul className={"flex"}>
-              <span className='mr-14 mt-4'>{themeToggler()}</span>
+              <span className='hidden xl:block mr-14 mt-4'>{themeToggler()}</span>
               <li className={'lg:text-xl lg:mr-10 xl:mr-14 lg:my-4 uppercase font-semibold tracking-wider transform hover:scale-110'}><Link to="/">About</Link></li>
               <li className={'lg:text-xl lg:mr-10 xl:mr-14 lg:my-4 uppercase font-semibold tracking-wider transform hover:scale-110'}><Link to="/experience">Experience</Link></li>
               <li className={'lg:text-xl lg:mr-10 xl:mr-14 lg:my-4 uppercase font-semibold tracking-wider transform hover:scale-110'}><Link to="/projects">Projects</Link></li>
