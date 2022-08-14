@@ -75,7 +75,7 @@ const App = () => {
             )
           })}
         </Switch>
-        <span className='block xl:hidden'>{themeToggler()}</span>
+        <span className=''>{themeToggler()}</span>
         {/* <div className="toggle-theme-wrapper mt-14 mb-16">
           <span>☀️</span>
           <label className="toggle-theme" htmlFor="checkbox">

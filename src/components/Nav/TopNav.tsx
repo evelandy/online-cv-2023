@@ -19,23 +19,24 @@ const TopNav: FC<ITopNavProps> = ({toggleTheme, defaultDark}) => {
     }
   });
 
-  const themeToggler = () => {
-    return (
-      <div className="toggle-theme-wrapper">
-        <span>☀️</span>
-        <label className="toggle-theme" htmlFor="checkbox">
-          <input
-            type="checkbox"
-            id="checkbox"
-            onChange={toggleTheme}
-            defaultChecked={defaultDark}
-          />
-          <div className="slider round"></div>
-        </label>
-        <span>🌒</span>
-      </div>
-    );
-  }
+  // commenting themeToggler out for now until a fix to toggle both upper and lower toggles can be made
+  // const themeToggler = () => {
+  //   return (
+  //     <div className="toggle-theme-wrapper">
+  //       <span>☀️</span>
+  //       <label className="toggle-theme" htmlFor="checkbox">
+  //         <input
+  //           type="checkbox"
+  //           id="checkbox"
+  //           onChange={toggleTheme}
+  //           defaultChecked={defaultDark}
+  //         />
+  //         <div className="slider round"></div>
+  //       </label>
+  //       <span>🌒</span>
+  //     </div>
+  //   );
+  // }
   
   return (
     <div className={'hamNav'}>
@@ -58,7 +59,7 @@ const TopNav: FC<ITopNavProps> = ({toggleTheme, defaultDark}) => {
           <ul className={'flex justify-between fullNav'}>
             <li className={'lg:text-xl lg:my-4 uppercase font-semibold tracking-wider transform hover:scale-110'}><a href="#">Resume</a></li>
             <ul className={"flex"}>
-              <span className='hidden xl:block mr-14 mt-4'>{themeToggler()}</span>
+              {/* <span className='hidden xl:block mr-14 mt-4'>{themeToggler()}</span> this is commented out until fix for themeToggler is made */}
               <li className={'lg:text-xl lg:mr-10 xl:mr-14 lg:my-4 uppercase font-semibold tracking-wider transform hover:scale-110'}><Link to="/">About</Link></li>
               <li className={'lg:text-xl lg:mr-10 xl:mr-14 lg:my-4 uppercase font-semibold tracking-wider transform hover:scale-110'}><Link to="/experience">Experience</Link></li>
               <li className={'lg:text-xl lg:mr-10 xl:mr-14 lg:my-4 uppercase font-semibold tracking-wider transform hover:scale-110'}><Link to="/projects">Projects</Link></li>

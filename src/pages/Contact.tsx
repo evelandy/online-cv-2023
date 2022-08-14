@@ -59,7 +59,7 @@ const ContactPage: FC<IContact & RouteComponentProps<any>> = () => {
 
   return (
     <div className={'contact-main-container sm:flex sm:flex-col md:flex md:justify-between mt-10'}>
-      <h1 className={'uppercase text-4xl text-center mb-14'}>Contact</h1>
+      <h1 className={'uppercase text-4xl text-center mb-14 contact-header'}>Contact</h1>
       <span className={'contact-flex-container lg:flex lg:flex-row'}>
         <iframe
           width={"100%"}

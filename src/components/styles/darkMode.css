@@ -115,3 +115,19 @@ label textarea:focus {
     outline: none;
     background-color: inherit;
 }
+
+/* fix media query below to max-width of 1024px when toggleTheme is fixed in topnav */
+@media screen and (max-width: 1500px) {
+    .toggle-theme {
+        height: 18px;
+        width: 30px;
+    }
+    .slider::before {
+        height: 14px;
+        /* left: -8px; */
+        width: 14px;
+    }
+    input:checked + .slider::before {
+        transform: translateX(12px);
+    }
+}
