@@ -1,4 +1,4 @@
-import React, { ChangeEventHandler, FC, useEffect } from 'react';
+import React, { ChangeEventHandler, useEffect } from 'react';
 import { TopNav } from './components/Nav';
 import { BrowserRouter, Route, Switch, RouteComponentProps  } from 'react-router-dom';
 import routes from './config/routes';
@@ -8,19 +8,19 @@ import './components/styles/darkMode.css';
 
 const App = () => {
   const storedTheme = localStorage.getItem("theme");
-
+  
   const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const defaultDark = storedTheme === "dark" || (storedTheme === null && prefersDark);
 
   const setDark = () => {
     localStorage.setItem("theme", "dark");
     document.documentElement.setAttribute("data-theme", "dark");
-  }
+  };
+
   const setLight = () => {
     localStorage.setItem("theme", "light");
     document.documentElement.setAttribute("data-theme", "light");
-  }
-
-  const defaultDark = storedTheme === "dark" || (storedTheme === null && prefersDark);
+  };
 
   const toggleTheme: ChangeEventHandler<HTMLInputElement> = (e) => {
     if (e.target.checked) {
@@ -31,8 +31,9 @@ const App = () => {
   }
   
   useEffect(() => {
-    console.log('Loading App')
-  }, [])
+    storedTheme === 'dark' ? setDark() : setLight();
+  }, [storedTheme])
+
   return (
     <div className={'w-9/12 mx-auto appContainer'}>
       <BrowserRouter>
