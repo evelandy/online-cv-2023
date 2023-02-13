@@ -5,7 +5,6 @@ import routes from './config/routes';
 import './components/styles/appStyles.css';
 import './components/styles/darkMode.css';
 
-
 const App = () => {
   const storedTheme = localStorage.getItem("theme");
   
