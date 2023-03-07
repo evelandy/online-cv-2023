@@ -10,12 +10,14 @@ const Portfolio = () => {
       {
         projects.map((p, i) => {
           return (
-            <div className={`project-container ${projects[i].className}`}>
+            <div key={i} className={`project-container ${projects[i].className}`}>
               <ul className="project-card-container">
                 <li className="featured-card">
 
                   <div className="project-image">
-                    <img src={GulfCoastCorgis} alt={`${projects[i].title} project`} />
+                    <a target="_blank" href={projects[i].links?.reduce((t: string, c: string) => { return c; })} >
+                      <img src={projects[i].image} alt={`${projects[i].title} project`} />
+                    </a>
                   </div>
 
                   <div className="project-content">
