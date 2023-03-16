@@ -1,3 +1,5 @@
+@import url('darkMode.css');
+
 .hamNavSticky {
   z-index: 9;
 }
@@ -27,8 +29,9 @@
 
 .project-image {
   position: relative;
-  background-color: #322f2f;
-  box-shadow: 2px 0px 10px -4px #484444;
+  /* background-color: #322f2f; */
+  background-color: var(--image-background-color);
+  box-shadow: var(--image-box-shadow);
 }
 .project-image img {
   height: 375px;
@@ -44,6 +47,7 @@
   font-size: 21px;
   font-weight: 700;
   letter-spacing: 1.25px;
+  color: var(--font-color);
 }
 
 .project-description {
@@ -117,16 +121,18 @@
     position: relative;
     width: 75%;
     height: auto;
-    background-color: #8e0606;
+    /* background-color: #8e0606; */
+    background-color: var(--image-background-color);
   }
   .project-image img {
     height: 375px;
-    opacity: .85;
+    opacity: var(--image-opacity);
     object-fit: cover;
   }
   .project-image:hover {
     cursor: pointer;
-    background-color: unset;
+    /* background-color: unset; */
+    background-color: var(--image-background-color-hover);
   }
   
   .project-title {
@@ -135,7 +141,7 @@
     font-weight: 600;
     right: 7%;
     text-shadow: 0px 0px 1px lightblue;
-    color: #fff;
+    color: var(--font-color);
     bottom: 22.5rem;
     left: unset;
   }
@@ -160,19 +166,30 @@
   }
   
   .project-tech-list {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    /* display: grid; */
+    /* grid-template-columns: repeat(6, 1fr); */
     text-align: center;
+    display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
-    font-weight: 600;
+    font-weight: 800;
     text-shadow: 0px 0px 1px lightblue;
     letter-spacing: .65px;
     bottom: 18.5rem;
-    left: 10%;
-
+    left: 30%;
+    width: 65%;
+    /* justify-content: flex-end; */
+    background-color: var(--background-color);
+    mix-blend-mode: var(--mix-blend-mode);
+    
+  }
+  .project-tech-list li:not(:last-child):after {
+    content: "\00a0\00a0\00a0|";
   }
   .project-tech-list li {
-    font-size: .85rem;
+    /* font-size: .85rem; */
+    font-size: .6rem;
+    margin-right: .5rem;
   }
   .project-second .project-card-container .featured-card .project-content .project-tech-list {
     bottom: 22.5rem;
