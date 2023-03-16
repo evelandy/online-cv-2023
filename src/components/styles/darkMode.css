@@ -5,6 +5,11 @@
     --name-header-color: #dc2626;
     --contact-input: #fff;
     --input-border: 1px solid #333;
+    --image-background-color: #fff;
+    --image-background-color-hover: #fb8b8b;
+    --image-opacity: .45;
+    --image-box-shadow: 2px 0px 10px -4px #555050;
+    --mix-blend-mode: darken;
 }
 
 [data-theme="dark"] {
@@ -14,6 +19,11 @@
     --name-header-color: #dc2626;
     --contact-input: #444;
     --input-border: 1px solid #eee;
+    --image-background-color: #514e4e;
+    --image-background-color-hover: #835858;
+    --image-opacity: .65;
+    --image-box-shadow: 2px 0px 10px -4px #4a4444;
+    --mix-blend-mode: lighten;
 }
 
 body {
