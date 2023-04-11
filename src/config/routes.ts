@@ -3,7 +3,7 @@ import AboutPage from "../pages/About";
 import ContactPage from "../pages/Contact";
 import ProjectsPage from "../pages/Projects";
 import ExperiencePage from "../pages/Experience";
-import HomePage from "../pages/Home";
+import JobInfoDL from "../pages/JobInfoDL";
 
 const routes: IRoute[] = [
   {
@@ -30,6 +30,12 @@ const routes: IRoute[] = [
     component: ContactPage,
     exact: true
   },
+  {
+    path: '/dl',
+    name: 'Job Info DL',
+    component: JobInfoDL,
+    exact: true
+  }
   // {
   //   path: '/education/:number',
   //   name: 'Education Page',
