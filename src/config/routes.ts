@@ -4,6 +4,7 @@ import ContactPage from "../pages/Contact";
 import ProjectsPage from "../pages/Projects";
 import ExperiencePage from "../pages/Experience";
 import JobInfoDL from "../pages/JobInfoDL";
+import Resume from "../pages/Resume";
 
 const routes: IRoute[] = [
   {
@@ -34,6 +35,12 @@ const routes: IRoute[] = [
     path: '/dl',
     name: 'Job Info DL',
     component: JobInfoDL,
+    exact: true
+  },
+  {
+    path: '/resume',
+    name: 'View and Download Resume',
+    component: Resume,
     exact: true
   }
   // {
