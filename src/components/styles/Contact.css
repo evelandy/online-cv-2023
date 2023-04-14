@@ -1,3 +1,20 @@
+div.swal2-container div.swal2-popup.swal2-toast {
+    display: flex;
+    flex-direction: column;
+}
+div.swal2-container div.swal2-popup.swal2-toast div.swal2-header {
+    margin-bottom: 8px;
+		font-size: 25px;
+}
+div.swal2-container div.swal2-popup.swal2-toast div.swal2-header h2.swal2-title {
+	text-transform: uppercase;
+}
+div.swal2-container div.swal2-popup.swal2-toast div.swal2-content {
+    margin-top: 8px;
+    margin-bottom: 10px;
+		font-size: large;
+}
+
 form label {
     margin-top: 10px;
 }
