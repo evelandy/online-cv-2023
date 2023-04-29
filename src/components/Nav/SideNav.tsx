@@ -1,24 +1,17 @@
-import { FC, useState, useEffect } from 'react';
-import experienceList from '../../data/experienceList';
-import { NavLink } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import '../styles/activeNav.css';
 import $ from 'jquery';
 
 // TODO:
-// 1. Need to ONLY display "My ToolKit" badges that were utilized for each selected ACTIVE Job Experience
-// 2. Fix ALL TypeScript interface types that use "any" to use the correct interface type
-// 3. Fix Resume link to download AND view resume live 
-// 4. Fix Contact page live map and contact form to send the submitted form to email AND gSheet
-
-
-
+// 1. Fix the below TypeScript interface type "any" for [ {selectedCompany}:any ] to use the correct interface type
+// 2. Come back to fix the sizes for icons in 'toolkit' section for each screen size.
 
 
 
 export interface ISideNavProps {}
 
-const SideNav = () => {
-  const [active, setActive] = useState<boolean>(true);
+const SideNav = ({selectedCompany}:any) => {
+  // const [active, setActive] = useState<boolean>(true);
   const [selected, setSelected] = useState<string>('Halliburton');
   useEffect(() => {
     handleActive()
@@ -26,21 +19,26 @@ const SideNav = () => {
   const handleActive = () => {
     $(document).on('click', 'ul li', function() {
       $(this).addClass('active').siblings().removeClass('active')
-    })
+    });
   }
+
+  useEffect(() => {
+    selectedCompany(selected)
+  }, [selectedCompany, selected])
+
   return (
     <div className={'flex flex-row mt-24'}>
       <ul className={'flex flex-col text-left sideNav text-lg lg:mr-24 lg:text-2xl'}>
-      <li onClick={(e:any) => setSelected(e.target.innerText)} className={'active tracking-wider hover:bg-red-alert hover:text-white-primary font-semibold'}>Halliburton</li>
-      <li onClick={(e:any) => setSelected(e.target.innerText)} className={'tracking-wider hover:bg-red-alert hover:text-white-primary font-semibold'}>Gretrix</li>
-      <li onClick={(e:any) => setSelected(e.target.innerText)} className={'tracking-wider hover:bg-red-alert hover:text-white-primary font-semibold'}>Look Far Labs</li>
-      {/* <li onClick={(e:any) => setSelected(e.target.innerText)} className={'tracking-wider hover:bg-red-alert hover:text-white-primary font-semibold'}>GrDev</li> */}
-      <li onClick={(e:any) => setSelected(e.target.innerText)} className={'tracking-wider hover:bg-red-alert hover:text-white-primary font-semibold'}>PRT-Solutions</li>
-      <li onClick={(e:any) => setSelected(e.target.innerText)} className={'tracking-wider hover:bg-red-alert hover:text-white-primary font-semibold'}>Amity Social</li>
-    </ul>
+        <li onClick={(e) => setSelected((e.target as Element).innerHTML)} className={'active tracking-wider hover:bg-red-alert hover:text-white-primary font-semibold'}>Halliburton</li>
+        <li onClick={(e) => setSelected((e.target as Element).innerHTML)} className={'tracking-wider hover:bg-red-alert hover:text-white-primary font-semibold'}>Gretrix</li>
+        <li onClick={(e) => setSelected((e.target as Element).innerHTML)} className={'tracking-wider hover:bg-red-alert hover:text-white-primary font-semibold'}>Look Far Labs</li>
+        {/* <li onClick={(e) => setSelected((e.target as Element).innerHTML)} className={'tracking-wider hover:bg-red-alert hover:text-white-primary font-semibold'}>GrDev</li> */}
+        <li onClick={(e) => setSelected((e.target as Element).innerHTML)} className={'tracking-wider hover:bg-red-alert hover:text-white-primary font-semibold'}>PRT-Solutions</li>
+        <li onClick={(e) => setSelected((e.target as Element).innerHTML)} className={'tracking-wider hover:bg-red-alert hover:text-white-primary font-semibold'}>Amity Social</li>
+      </ul>
     <ul className={`ml-8 ${selected === 'Halliburton' ? 'inline' : 'hidden'} lg:text-lg`}>
       <li><h3 className={'font-bold text-xl mr-4 lg:text-2xl'}>Application Developer <span className={'text-red-alert'}>@ Halliburton</span></h3></li>
-      <li><p className={'text-sm text-left my-2 font-medium tracking-wider ml-3'}>April 2022 - Current</p></li>
+      <li><p className={'text-sm text-left my-2 font-medium tracking-wider ml-3'}>April 2022 - October 2022</p></li>
       <ul className={'text-left ml-5 tracking-wider text-md description'}>
         <li className={''}>Working closely with Product Owners, Senior Developers, QA Engineers, and Other Developers on the team, I converted legacy codebase solving bugs, creating new features, and migrating data.</li>
         <li><p>Created scripts to migrate jobs, large scale data, and other tables across infrastructure.</p></li>
@@ -49,7 +47,7 @@ const SideNav = () => {
     </ul>
     <ul className={`ml-8 ${selected === 'Gretrix' ? 'inline' : 'hidden'} lg:text-lg`}>
       <li><h3 className={'font-bold text-xl mr-4 lg:text-2xl'}>Full Stack Web Developer <span className={'text-red-alert'}>@ Gretrix</span></h3></li>
-      <li><p className={'text-sm text-left my-2 font-medium tracking-wider ml-3'}>June 2021 - May 2022</p></li>
+      <li><p className={'text-sm text-left my-2 font-medium tracking-wider ml-3'}>June 2021 - May 2022 | September 2022 - Current</p></li>
       <ul className={'text-left ml-5 tracking-wider text-md description'}>
         <li className={''}>Worked closely with multiple clients to solve advanced issues regarding data analytics, web development and other software related issues.</li>
         <li><p>Created and Utilized custom A/B tests through Google Optimize I was able to help our client convert an extra 1% annual revenue.</p></li>
@@ -69,9 +67,8 @@ const SideNav = () => {
       <li><h3 className={'font-bold text-xl mr-4 lg:text-2xl'}>Full Stack Software Engineer <span className={'text-red-alert'}>@ GrDev</span></h3></li>
       <li><p className={'text-sm text-left my-2 font-medium tracking-wider ml-2'}>March. 2018 - Current</p></li>
       <ul className={'text-left ml-5 tracking-wider text-md description'}>
-        <li className={''}>This is where the description will go</li>
-        <li><p>This is where the description will go</p></li>
-        <li><p>This is where the description will go</p></li>
+        <li className={''}> </li>
+        <li><p> </p></li>
       </ul>
     </ul>
     <ul className={`ml-8 ${selected === 'PRT-Solutions' ? 'inline' : 'hidden'} lg:text-lg`}>
@@ -80,7 +77,6 @@ const SideNav = () => {
       <ul className={'text-left ml-5 tracking-wider text-md description'}>
         <li className={''}>Utilizing React Native, SQL and Python I was able to create a highly functional scalable mobile app in both iOS and Android.</li>
         <li><p>Creating RESTful API endpoints, I was able to keep this app flexible and lightweight.</p></li>
-        {/* <li><p>This is where the description will go</p></li> */}
       </ul>
     </ul>
     <ul className={`ml-8 ${selected === 'Amity Social' ? 'inline' : 'hidden'} lg:text-lg`}>
