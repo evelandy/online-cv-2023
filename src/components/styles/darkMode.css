@@ -65,7 +65,8 @@ h1 span.dm-name-header {
 }
 
 .slider {
-    background-color: #ccc;
+    /* background-color: #ccc; */
+    background: linear-gradient(to right, #dc2626, #fb8b8b);
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -91,7 +92,7 @@ input:checked + .slider::before {
 }
 
 input:checked + .slider {
-    background-color: salmon;
+    background: linear-gradient(to right, #fb8b8b, #dc2626);
 }
 
 .slider.round {
