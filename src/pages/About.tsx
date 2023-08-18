@@ -2,6 +2,7 @@ import React, { FC, useEffect, Suspense, useState } from 'react';
 import IPage from '../interfaces/page';
 import '../components/styles/blinker.css';
 import '../components/styles/about.css';
+import '../components/styles/darkMode.css';
 import { Route } from 'react-router-dom';
 // import { Canvas } from '@react-three/fiber';
 // import Sphere from '../components/three/Sphere';
@@ -73,9 +74,9 @@ const HomePage: FC<IPage> = ({name, globalTheme}) => {
             <LinkedInBox />
           </Suspense>
         </Canvas> */}
-        <span onClick={()=> window.open("https://github.com/evelandy", "_blank")} className={'mx-8 mt-8 transform hover:scale-110'}>{githubIcon()}</span>
-        <span onClick={()=> window.open("mailto:william.griffin@wrgcv.com?subject=Contact from portfolio", "_blank")} className={'mx-9 mt-7 transform hover:scale-110'}>{emailIcon()}</span>
-        <span onClick={()=> window.open("https://www.linkedin.com/in/william-griffin-4a4392b9/", "_blank")} className={'mx-8 mt-7 transform hover:scale-110'}>{linkedinIcon()}</span>
+        <span onClick={()=> window.open("https://github.com/evelandy", "_blank")} className={'mx-8 mt-8 transform hover:scale-110 social-link'}>{githubIcon()}</span>
+        <span onClick={()=> window.open("mailto:william.griffin@wrgcv.com?subject=Contact from portfolio", "_blank")} className={'mx-9 mt-7 transform hover:scale-110 social-link'}>{emailIcon()}</span>
+        <span onClick={()=> window.open("https://www.linkedin.com/in/william-griffin-4a4392b9/", "_blank")} className={'mx-8 mt-7 transform hover:scale-110 social-link'}>{linkedinIcon()}</span>
       </div>
     </div>
   );
